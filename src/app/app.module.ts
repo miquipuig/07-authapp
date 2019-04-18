@@ -6,6 +6,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { PreciosComponent } from './components/precios/precios.component';
 import { ProtegidaComponent } from './components/protegida/protegida.component';
+import { app_routing } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ProtegidaComponent } from './components/protegida/protegida.component';
     ProtegidaComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    app_routing
   ],
   providers: [],
   bootstrap: [AppComponent]
