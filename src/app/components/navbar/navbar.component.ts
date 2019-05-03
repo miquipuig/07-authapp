@@ -7,14 +7,18 @@ import { AuthService } from '../../services/auth.service';
   templateUrl: './navbar.component.html',
   styles: []
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
-  constructor( private auth:AuthService ) { }
-
-  ngOnInit() {
+  constructor( private auth:AuthService ) {
+    auth.handleAuthentication();
   }
 
-  login(){
+
+  login() {
     this.auth.login();
+  }
+
+  salir() {
+    this.auth.logout();
   }
 }
